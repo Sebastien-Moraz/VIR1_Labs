@@ -10,55 +10,133 @@ If you have opted for a graphical installation, provide screenshots and describe
 
 ### Cloud cmd line interface - AWS Cli
 
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 ```
-//TODO all commands used and the results obtained
+
+```bash
+➜  ~ aws --v  
+aws-cli/2.15.41 Python/3.11.8 Linux/6.5.0-28-generic exe/x86_64.linuxmint.21 prompt/off
+
 ```
 
 ### IDE - Intellij
 
-```
-//TODO all commands used and the results obtained
-```
+Au préalable, installer jetbrains-toolbox.
+
+Une fois fait, lancer jetbrains-toolbox et installer Intellij Ultimate (2024.1). 
 
 ### Containers Engins - Docker
 
 ```
-//TODO all commands used and the results obtained
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$UBUNTU_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 ```
 
 ### Versioning - Git + Git flow
 
 ```
-//TODO all commands used and the results obtained
+sudo apt install git git-flow
+```
+
+Result:
+
+```bash
+➜  ~ git --version
+git version 2.34.1
+➜  ~ git flow version
+1.12.3 (AVH Edition)
 ```
 
 ### IDE Plugin - Docker plugin for IntelliJ
 
-```
-//TODO all commands used and the results obtained
-```
+Lançer Intellij et aller dans File -> Settings -> Plugins -> Marketplace et chercher "Docker" puis installer le plugin.
 
 ### Development Kit - JDK
 
+```bash
+curl https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb 
 ```
-//TODO all commands used and the results obtained
+
+Double cliquer sur le fichier téléchargé pour lancer l'installation.
+
+Une fois l'installation terminée, vérifier la version de Java installée.
+
+```bash
+➜  ~ java --version
+```
+
+Si la version de Java n'est pas la 17.0.11, il faut changer la version par défaut.
+
+```bash
+sudo update-java-alternatives -s /usr/lib/jvm/jdk-17-oracle-x64
 ```
 
 ### Package manager - Maven
 
+``` bash
+cd /tmp; wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 ```
-//TODO all commands used and the results obtained
+
+``` bash
+tar xf apache-maven-3.9.6-bin.tar.gz
+```
+
+``` bash
+sudo mv apache-maven-3.9.6 /opt/maven
+```
+
+``` bash
+sudo chown -R root:root /opt/maven
+```
+
+``` bash
+sudo su
+```
+
+``` bash
+cat <<EOF >> /etc/profile.d/mymavenvars.sh
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+EOF
+ln -s /opt/maven/bin/mvn /usr/bin/mvn
+```
+
+``` bash
+chmod 755 /etc/profile.d/mymavenvars.sh
+```
+
+``` bash
+source /etc/profile.d/mymavenvars.sh
+```
+
+``` bash
+➜  ~ mvn --version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: /opt/maven
+Java version: 17.0.11, vendor: Oracle Corporation, runtime: /usr/lib/jvm/jdk-17-oracle-x64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.5.0-28-generic", arch: "amd64", family: "unix"
 ```
 
 ## Schema
 
-Show your development environment, mentioning all the components in the stack.
-
-Identify the links between components.
-
-```
-//TODO Schema
-```
+https://www.figma.com/file/IQ2lvgJiNUcMiOnzDSlltX/Untitled?type=design&node-id=0%3A1&mode=design&t=ouoVib8HBWRkv5Md-1
 
 ## Analysis
 
