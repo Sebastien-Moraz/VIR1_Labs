@@ -24,9 +24,9 @@ aws-cli/2.15.41 Python/3.11.8 Linux/6.5.0-28-generic exe/x86_64.linuxmint.21 pro
 
 ### IDE - Intellij
 
-Au préalable, installer jetbrains-toolbox.
+First, install jetbrains-toolbox.
 
-Une fois fait, lancer jetbrains-toolbox et installer Intellij Ultimate (2024.1). 
+Once done, launch jetbrains-toolbox and install Intellij Ultimate (2024.1).
 
 ### Containers Engins - Docker
 
@@ -63,7 +63,7 @@ git version 2.34.1
 
 ### IDE Plugin - Docker plugin for IntelliJ
 
-Lançer Intellij et aller dans File -> Settings -> Plugins -> Marketplace et chercher "Docker" puis installer le plugin.
+Launch Intellij and go to File -> Settings -> Plugins -> Marketplace and search for "Docker", then install the plugin.
 
 ### Development Kit - JDK
 
@@ -71,15 +71,15 @@ Lançer Intellij et aller dans File -> Settings -> Plugins -> Marketplace et che
 curl https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb 
 ```
 
-Double cliquer sur le fichier téléchargé pour lancer l'installation.
+Double-click on the downloaded file to start installation.
 
-Une fois l'installation terminée, vérifier la version de Java installée.
+Once installation is complete, check the Java version installed.
 
 ```bash
 ➜  ~ java --version
 ```
 
-Si la version de Java n'est pas la 17.0.11, il faut changer la version par défaut.
+If the Java version is not 17.0.11, change the default version:
 
 ```bash
 sudo update-java-alternatives -s /usr/lib/jvm/jdk-17-oracle-x64
