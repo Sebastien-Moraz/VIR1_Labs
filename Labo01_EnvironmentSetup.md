@@ -147,13 +147,13 @@ Answer the questions below, giving reasons for your answer (link, source).
 * How does the AWS Cli interact with the cloud ?
 
 ```
-//TODO answer the question
+il communique avec l'api d'AWS pour envoyer des commandes et recevoir des réponses
 ```
 
 * What other ways do we have of dialoguing/interacting with the AWS cloud if we wanted to do without the CLI?
 
 ```
-//TODO answer the question
+soit via la console web, soit via des SDK
 ```
 
 * What commands do I need to run in the CLI to start an ec2 instance?
