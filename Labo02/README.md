@@ -114,7 +114,7 @@ It is not persistent, if we make a modification and we restart the application, 
 Docker can automate the deployment of the application, by creating containers for each part of the application
 ```
 
-* Try to list the tasks to be carried out to obtain two thirds, one hosting the application part locally and the second third using Docker for the database engine.
+* Try to list the tasks to be carried out to obtain two tiers, one hosting the application part locally and the second tier using Docker for the database engine.
 
 ```
 a first docker will deal with the centralization of data using a database

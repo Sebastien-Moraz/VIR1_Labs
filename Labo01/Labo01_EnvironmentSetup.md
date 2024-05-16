@@ -28,7 +28,7 @@ First, install jetbrains-toolbox.
 
 Once done, launch jetbrains-toolbox and install Intellij Ultimate (2024.1).
 
-### Containers Engins - Docker
+### Containers Engine - Docker
 
 ```
 # Add Docker's official GPG key:
