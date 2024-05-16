@@ -74,7 +74,7 @@ it is accessible via the url : http://localhost:8080/
 * [Maven plug in to run the app](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/#run)
 
 ```bash
-mvn spring-boot:run
+mvnw spring-boot:run
 ```
 
 ---
@@ -102,7 +102,7 @@ It is not persistent, if we make a modification and we restart the application, 
 * How many logic layers are implemented on this application?
 
 ```
-//TODO
+view, controller, service, repository
 ```
 
 ---
