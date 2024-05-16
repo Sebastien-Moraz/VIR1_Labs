@@ -159,7 +159,7 @@ soit via la console web, soit via des SDK
 * What commands do I need to run in the CLI to start an ec2 instance?
 
 ```
-//TODO answer the question
+aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
 ```
 
 ### Docker Engine
@@ -167,13 +167,13 @@ soit via la console web, soit via des SDK
 * What type of hypervisor does Docker use?
 
 ```
-//TODO answer the question
+Docker is a platform for developing, shipping, and running applications. It uses containerization technology to package and isolate applications with their entire runtime environment, including dependencies, into a single container that can be run on any Linux or Windows server. 
 ```
 
 * What role does the Docker Desktop play in the Docker architecture?
 
 ```
-//TODO answer the question
+a faciliter l'accès au Docker Engine.
 ```
 
 ### Java Environment
@@ -181,7 +181,11 @@ soit via la console web, soit via des SDK
 * JDK, JRE, JVM... what's the difference?
 
 ```
-//TODO answer the question
+JDK: Java Development Kit, contient le JRE et les outils de développement
+
+JRE: Java Runtime Environment, contient la JVM et les librairies nécessaires pour exécuter des applications Java
+
+JVM: Java Virtual Machine, machine virtuelle qui exécute le bytecode Java
 ```
 
 ### Maven
@@ -189,7 +193,7 @@ soit via la console web, soit via des SDK
 * What is the command you need to use Maven to retrieve dependencies (and only that)?
 
 ```
-//TODO answer the question
+
 ```
 
 
